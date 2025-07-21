@@ -2,28 +2,20 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const path = require('path');
 
+const app = express();
+
+require('./prod')(app);
 const songsRoutes = require('./routes/songsRoutes');
 
 dotenv.config();
 
-const app = express();
-// const __dirname = path.resolve();
-
 if (process.env.NODE_ENV !== 'production') {
   app.use(cors());
 }
+
 app.use(express.json());
 app.use('/api/songs', songsRoutes);
-
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../frontend', 'dist', 'index.html'));
-//   });
-// }
 
 const connectDB = async () => {
   try {
