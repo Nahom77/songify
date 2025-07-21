@@ -58,13 +58,13 @@ exports.updateSong = async function (req, res) {
   }
 };
 
-// exports.deleteNote = async function (req, res) {
-//   try {
-//     const note = await Note.findByIdAndDelete(req.params.id);
+exports.deleteSong = async function (req, res) {
+  try {
+    const song = await Song.findByIdAndDelete(req.params.id);
 
-//     res.status(200).json({ message: 'Note Deleted successfully.' });
-//   } catch (error) {
-//     console.error('Error - ', error.message);
-//     res.status(500).json({ message: 'Internal server error' });
-//   }
-// };
+    res.status(200).json({ message: 'Note Deleted successfully.' });
+  } catch (error) {
+    console.error('Error - ', error.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
