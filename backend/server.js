@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
 
-// const notesRoutes = require('./routes/notesRoutes');
+const songsRoutes = require('./routes/songsRoutes');
 
 dotenv.config();
 
