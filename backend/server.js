@@ -27,8 +27,10 @@ const connectDB = async () => {
   }
 };
 
+const PORT = process.env.PORT || 5001;
+
 connectDB().then(() => {
-  app.listen(5001, () => {
+  app.listen(PORT, () => {
     console.log('Listening on port 5001');
   });
 });
