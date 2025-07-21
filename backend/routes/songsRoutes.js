@@ -1,7 +1,7 @@
 const express = require('express');
 const {
   getAllSongs,
-  // getNote,
+  getSong,
   createSong,
   // updateNote,
   // deleteNote,
@@ -10,7 +10,7 @@ const {
 const router = express.Router();
 
 router.get('/', getAllSongs);
-// router.get('/:id', getNote);
+router.get('/:id', getSong);
 router.post('/', createSong);
 // router.put('/:id', updateNote);
 // router.delete('/:id', deleteNote);

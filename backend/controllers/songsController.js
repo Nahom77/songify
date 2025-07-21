@@ -12,16 +12,16 @@ exports.getAllSongs = async function (req, res) {
   }
 };
 
-// exports.getNote = async function (req, res) {
-//   try {
-//     const notes = await Note.findById(req.params.id);
+exports.getSong = async function (req, res) {
+  try {
+    const song = await Note.findById(req.params.id);
 
-//     res.status(200).json(notes);
-//   } catch (error) {
-//     console.error('Error fetching one Note - ', error.message);
-//     res.status(500).json({ message: 'Internal server error' });
-//   }
-// };
+    res.status(200).json(song);
+  } catch (error) {
+    console.error('Error fetching one Note - ', error.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
 
 exports.createSong = async function (req, res) {
   try {
