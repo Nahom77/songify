@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavBar } from './components/NavBar';
+import { Route, Routes } from 'react-router';
 import styled from 'styled-components';
+import { HomePage } from './pages/HomePage';
 
 // styled
 
@@ -13,7 +14,7 @@ const AllContainer = styled.div`
   gap: 1rem;
   align-items: center;
 
-  @media (max-width: 450px) {
+  @media (max-width: 750px) {
     width: 95%;
   }
 `;
@@ -21,7 +22,9 @@ const AllContainer = styled.div`
 export function App() {
   return (
     <AllContainer>
-      <NavBar />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
     </AllContainer>
   );
 }
