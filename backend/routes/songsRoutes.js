@@ -2,7 +2,7 @@ const express = require('express');
 const {
   getAllSongs,
   // getNote,
-  // createNote,
+  createSong,
   // updateNote,
   // deleteNote,
 } = require('../controllers/songsController');
@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.get('/', getAllSongs);
 // router.get('/:id', getNote);
-// router.post('/', createNote);
+router.post('/', createSong);
 // router.put('/:id', updateNote);
 // router.delete('/:id', deleteNote);
 

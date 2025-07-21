@@ -6,8 +6,16 @@ const songSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    content: {
+    artist: {
       type: String,
+      required: true,
+    },
+    album: {
+      type: String,
+      required: true,
+    },
+    year: {
+      type: Number,
       required: true,
     },
   },

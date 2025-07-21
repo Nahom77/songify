@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(cors());
 }
 app.use(express.json());
-// app.use('/api/songs', notesRoutes);
+app.use('/api/songs', songsRoutes);
 
 // if (process.env.NODE_ENV === 'production') {
 //   app.use(express.static(path.join(__dirname, '../frontend/dist')));

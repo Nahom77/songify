@@ -23,18 +23,18 @@ exports.getAllSongs = async function (req, res) {
 //   }
 // };
 
-// exports.createNote = async function (req, res) {
-//   try {
-//     const { title, content } = req.body;
-//     const note = new Note({ title, content });
+exports.createSong = async function (req, res) {
+  try {
+    const { title, artist, album, year } = req.body;
+    const song = new Song({ title, artist, album, year });
 
-//     const createdNote = await note.save();
-//     res.status(201).json(createdNote);
-//   } catch (error) {
-//     console.error('Error - ', error.message);
-//     res.status(500).json({ message: 'Internal server error' });
-//   }
-// };
+    const createdSong = await song.save();
+    res.status(201).json(createdSong);
+  } catch (error) {
+    console.error('Error - ', error.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
 
 // exports.updateNote = async function (req, res) {
 //   try {
