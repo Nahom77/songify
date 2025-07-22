@@ -12,16 +12,22 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
   border: none;
-  border-radius: 1rem;
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 1.3rem;
+  &:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+  }
 
   &:hover {
     filter: brightness(110%);

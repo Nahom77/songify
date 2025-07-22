@@ -32,7 +32,6 @@ export const SongContainer = styled.div`
 `;
 
 export function SongsGrid({ songs }) {
-  const mySongs = songs.slice();
   return (
     <>
       <Container>
