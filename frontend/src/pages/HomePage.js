@@ -28,7 +28,7 @@ export function HomePage() {
   return (
     <>
       <NavBar />
-      <SongsGrid />
+      <SongsGrid songs={songs} />
     </>
   );
 }
