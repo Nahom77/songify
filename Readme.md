@@ -53,30 +53,31 @@ Development Server
 Module Rules
 
 - JavaScript/JSX Processing:
-  _ Uses Babel via babel-loader
-  _ Excludes node*modules - CSS Handling:
-  * Supports direct .css imports
-  _ Bundles styles with style-loader and css-loader - Image Assets:
-  _ Handles PNG/JPEG/GIF/WEBP with Webpack 5's asset modules
-  _ Outputs to images/ with content hashes - SVG Handling:
-  _ Dual mode support:
-  _ As React components via @svgr/webpack when imported in JSX
-  _ As regular assets when referenced directly
+  - Uses Babel via babel-loader
+  - Excludes node\*modules - CSS Handling:
+  - Supports direct .css imports
+  - Bundles styles with style-loader and css-loader - Image Assets:
+  - Handles PNG/JPEG/GIF/WEBP with Webpack 5's asset modules
+  - Outputs to images/ with content hashes - SVG Handling:
+  - Dual mode support:
+  - As React components via @svgr/webpack when imported in JSX
+  - As regular assets when referenced directly
 
-Plugins
-HTML Webpack Plugin:
-Uses src/index.html as template
-Injects bundles into <body>
-Ensures correct public paths
-Content Security Policy (CSP) Plugin:
-Strict security policies with:
-Default restriction to same-origin ('self')
-Limited exceptions for:
-unsafe-eval in scripts (development only)
-Inline styles
-Image data URLs
-API connections to localhost and Heroku backend
-SHA-256 hashing for additional security
+-Plugins
+
+- HTML Webpack Plugin:
+  - Uses src/index.html as template
+  - Injects bundles into <body>
+  - Ensures correct public paths
+- Content Security Policy (CSP) Plugin:
+  - Strict security policies with:
+  - Default restriction to same-origin ('self')
+  - Limited exceptions for:
+  - unsafe-eval in scripts (development only)
+  - Inline styles
+  - Image data URLs
+  - API connections to localhost and Heroku backend
+  - SHA-256 hashing for additional security
 
 ## API end points
 
