@@ -83,7 +83,7 @@ Module Rules
 
 Base URL
 
-https://song-discovery-by-nahom-9e5e4e24a578.herokuapp.com/api
+https://songify-etba.onrender.com/api/songs
 
 Endpoints
 Method Endpoint Description Required Fields

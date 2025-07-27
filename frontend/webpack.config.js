@@ -87,7 +87,7 @@ module.exports = {
         'connect-src': [
           "'self'",
           'http://localhost:3000',
-          'https://song-discovery-by-nahom-9e5e4e24a578.herokuapp.com',
+          'https://songify-etba.onrender.com/',
         ],
       },
       {
